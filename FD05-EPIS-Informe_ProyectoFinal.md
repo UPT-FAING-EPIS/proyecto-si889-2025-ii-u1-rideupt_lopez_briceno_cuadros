@@ -16,6 +16,7 @@ Docente: *Mag. Patrick Cuadros Quiroga*
 Integrantes:
 
 ***Briceño Diaz, Jorge Luis		2017059611***
+
 ***Cuadros Garcia, Mirian			2021071083***
 
 **Tacna – Perú**
