@@ -344,7 +344,7 @@ Versión *{1.0}*
 
         **Impacto Social Positivo:**
         - **Inclusión**: Facilita el acceso a la educación superior para estudiantes de bajos recursos
-        - **Comunidad**: Fortalece los lazos entre estudiantes universitarios
+        - **Comunidad**: Fortalece los lazos entre estudiantes universitarios para garantizar viajes seguros
         - **Movilidad**: Mejora la movilidad urbana y reduce la dependencia del transporte público
         - **Economía**: Genera ingresos adicionales para estudiantes conductores
 
