@@ -12,17 +12,18 @@
 
 **Proyecto Hop Hop – Conecta tu camino universitario**
 
-Curso: *{Nombre de Asignatura}*
+Curso: *PATRONES DE SOFTWARE*
 
-Docente: *{Nombre de Docente}*
+Docente: *Mag. Patrick Cuadros Quiroga*
 
 Integrantes:
 
-***{Apellidos y nombres del estudiante (código universitario)}***
+***Briceño Diaz, Jorge Luis		2017059611***
+***Cuadros Garcia, Mirian			2021071083***
 
 **Tacna – Perú**
 
-***{Año}***
+***2025***
 
 **  
 **
