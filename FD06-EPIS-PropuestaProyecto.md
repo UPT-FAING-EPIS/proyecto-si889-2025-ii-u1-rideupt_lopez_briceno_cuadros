@@ -7,34 +7,21 @@ height="1.4625557742782151in"}
 
 **Escuela Profesional de Ingeniería de Sistemas**
 
-**Propuesta del Proyecto Hop Hop – Conecta tu camino universitario**
+**Proyecto Hop Hop – Conecta tu camino universitario**
 
-Curso: *{Nombre de Asignatura}*
+Curso: *PATRONES DE SOFTWARE*
 
-Docente: *{Nombre de Docente}*
+Docente: *Mag. Patrick Cuadros Quiroga*
 
 Integrantes:
 
-***{Apellidos y Nombres del estudiante (código universitario)}***
+***Briceño Diaz, Jorge Luis		2017059611***
 
-**Tacna -- Perú**
+***Cuadros Garcia, Mirian			2021071083***
 
-***{Año}***
+**Tacna – Perú**
 
-**\
-**
-
-**Proyecto**
-
-***{Nombre del Proyecto, lugar, año}***
-
-**Presentado por:**
-
-***{Nombre de autor(es)}***
-
-***{Cargo que ocupa en la organización}***
-
-***{Fecha}***
+***2025***
 
   ----------- -------- ----------- ----------- ------------ ------------------------
   CONTROL DE                                                
