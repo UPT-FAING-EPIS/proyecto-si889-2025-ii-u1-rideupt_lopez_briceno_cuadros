@@ -18,236 +18,207 @@ Docente: *Mag. Patrick Cuadros Quiroga*
 
 Integrantes:
 
-***Briceño Diaz, Jorge Luis		2017059611***
-
-***Cuadros Garcia, Mirian			2021071083***
+***Jorge Luis BRICEÑO DIAZ (2017059611)***
+***Mirian CUADROS GARCIA (2021071083)***
 
 **Tacna – Perú**
 
 ***2025***
 
-**\
+**  
 **
-
-  ----------- -------- ----------- ----------- ------------ ------------------------
-  CONTROL DE                                                
-  VERSIONES                                                 
-
-  Versión     Hecha    Revisada    Aprobada    Fecha        Motivo
-              por      por         por                      
-
-  1.0         MPV      ELV         ARV         10/10/2020   Versión Original
-  ----------- -------- ----------- ----------- ------------ ------------------------
+</center>
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 Sistema Hop Hop – Conecta tu camino universitario
 
 Documento de Especificación de Requerimientos de Software
 
-Versión *{1.0}*
+Versión *{2.0}*
 
-**\
-**
+||CONTROL DE VERSIONES||||||
+|| :-: | :- | :- | :- | :- | :- |
+||Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
+||1\.0|JBD|MCG|JBD|22/10/2025|Versión Original|
+||2\.0|JBD|MCG|JBD|25/01/2025|Actualización con estado de implementación|
 
-  ----------- -------- ----------- ----------- ------------ ------------------------
-  CONTROL DE                                                
-  VERSIONES                                                 
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-  Versión     Hecha    Revisada    Aprobada    Fecha        Motivo
-              por      por         por                      
+# **INDICE GENERAL**
 
-  1.0         MPV      ELV         ARV         10/10/2020   Versión Original
-  ----------- -------- ----------- ----------- ------------ ------------------------
+[1. Introducción](#_Toc52661346)
 
-**INDICE GENERAL**
+[2. Generalidades del Proyecto](#_Toc52661347)
 
-#  {#section .TOC-Heading}
+[3. Visionamiento del Proyecto](#_Toc52661348)
 
-[INTRODUCCION](#_Toc394513795) 4
+[4. Análisis de Procesos](#_Toc52661349)
 
-[I. Generalidades de la Empresa](#_Toc394513799) 5
+[5. Especificación de Requerimientos de Software](#_Toc52661350)
 
-[1. Nombre de la Empresa [5](#_Toc394513800)](#_Toc394513800)
+[6. Fase de Desarrollo](#_Toc52661351)
 
-[2. Vision [5](#_Toc394513800)](#_Toc394513800)
+[7. Estado Actual de Implementación](#_Toc52661352)
 
-[3. Mision [5](#_Toc394513800)](#_Toc394513800)
+[8. Conclusiones](#_Toc52661353)
 
-[4. Organigrama [5](#_Toc394513800)](#_Toc394513800)
+[9. Recomendaciones](#_Toc52661354)
 
-[II. Visionamiento de la Empresa](#_Toc394513799) 5
+[10. Bibliografía](#_Toc52661355)
 
-[1. Descripcion del Problema [5](#_Toc394513800)](#_Toc394513800)
+[11. Webgrafía](#_Toc52661356)
 
-[2. Objetivos de Negocios [5](#_Toc394513800)](#_Toc394513800)
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-[3. Objetivos de Diseño [5](#_Toc394513800)](#_Toc394513800)
+**<u>Informe de Especificación de Requerimientos de Software</u>**
 
-[4. Alcance del proyecto [5](#_Toc394513800)](#_Toc394513800)
-
-[5. Viabilidad del Sistema [5](#_Toc394513800)](#_Toc394513800)
-
-[6. Informacion obtenida del Levantamiento de
-Informacion](#_Toc394513800) 6
-
-[III. Análisis de Procesos](#_Toc394513799) 6
-
-[a) Diagrama del Proceso Actual -- Diagrama de
-actividades](#_Toc394513800) 6
-
-[b) Diagrama del Proceso Propuesto -- Diagrama de actividades
-Inicial](#_Toc394513800) 7
-
-[IV Especificacion de Requerimientos de Software](#_Toc394513799) 7
-
-[a) Cuadro de Requerimientos funcionales Inicial](#_Toc394513800) 7
-
-[b) Cuadro de Requerimientos No funcionales](#_Toc394513800) 7
-
-[c) Cuadro de Requerimientos funcionales Final](#_Toc394513800) 8
-
-[d) Reglas de Negocio](#_Toc394513800) 9
-
-[V Fase de Desarrollo](#_Toc394513799) 12
-
-[1. Perfiles de Usuario](#_Toc394513800) 12
-
-[2. Modelo Conceptual [5](#_Toc394513800)](#_Toc394513800)
-
-[a) Diagrama de Paquetes [5](#_Toc394513800)](#_Toc394513800)
-
-[b) Diagrama de Casos de Uso](#_Toc394513800) 12
-
-[c) Escenarios de Caso de Uso (narrativa)](#_Toc394513800) 14
-
-[3. Modelo Logico](#_Toc394513799) 23
-
-[a) Analisis de Objetos](#_Toc394513800) 23
-
-[b) Diagrama de Actividades con objetos](#_Toc394513800) 32
-
-[c) Diagrama de Secuencia](#_Toc394513800) 37
-
-[d) Diagrama de Clases](#_Toc394513800) 42
-
-[CONCLUSIONES](#_Toc394513803) 46
-
-[RECOMENDACIONES](#_Toc394513804) 46
-
-[BIBLIOGRAFIA](#_Toc394513805) 46
-
-[WEBGRAFIA](#_Toc394513806) 46
-
----
-
-## **INTRODUCCION**
+1. <span id="_Toc52661346" class="anchor"></span>**Introducción**
 
 Este documento presenta la especificación de requerimientos de software para el sistema **Hop Hop – Conecta tu camino universitario**, una aplicación móvil de carpooling desarrollada específicamente para estudiantes universitarios peruanos. El documento describe los requerimientos funcionales y no funcionales del sistema, así como los casos de uso y modelos de datos necesarios para su implementación.
 
 El sistema **Hop Hop** tiene como objetivo facilitar el transporte compartido entre estudiantes universitarios, proporcionando una solución tecnológica que permita reducir costos de movilidad, mejorar la accesibilidad a la educación superior y contribuir a la sostenibilidad ambiental mediante la reducción de emisiones vehiculares.
 
-**Características Principales del Sistema:**
+**Características Principales del Sistema Implementadas:**
 - **Aplicación móvil multiplataforma** desarrollada en Flutter para Android e iOS
 - **Sistema de geolocalización** integrado con Google Maps API
 - **Comunicación en tiempo real** mediante WebSockets y notificaciones push
 - **Gestión de roles duales** (conductor/pasajero) con interfaces adaptativas
 - **Sistema de precios dinámico** con cálculo automático basado en distancia
 - **Validación estudiantil** para garantizar seguridad y confiabilidad
+- **Google Sign-In integrado** con Firebase Auth
+- **Expiración automática de viajes** (10 minutos)
+- **Sistema de notificaciones push** con Firebase FCM
 
 Este documento está dirigido a desarrolladores, analistas de sistemas, y stakeholders del proyecto, proporcionando una guía completa para el desarrollo e implementación del sistema basada en el código ya implementado.
 
----
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-## **I. GENERALIDADES DEL PROYECTO**
+2. <span id="_Toc52661347" class="anchor"></span>**Generalidades del Proyecto**
 
-### **1. Nombre del Proyecto**
+### **2.1 Nombre del Proyecto**
 **Hop Hop – Conecta tu camino universitario**
 
-### **2. Visión**
+### **2.2 Visión**
 Ser la plataforma líder de carpooling universitario en Perú, conectando estudiantes de manera segura, económica y sostenible para facilitar el acceso a la educación superior.
 
-### **3. Misión**
+### **2.3 Misión**
 Desarrollar una aplicación móvil innovadora que permita a estudiantes universitarios compartir viajes de manera eficiente, reduciendo costos de transporte y contribuyendo al desarrollo sostenible de las comunidades universitarias.
 
-### **4. Alcance del Proyecto**
+### **2.4 Alcance del Proyecto**
 El proyecto abarca el desarrollo completo de una aplicación móvil de carpooling que incluye:
-- Sistema de autenticación y registro de usuarios
+- Sistema de autenticación y registro de usuarios con Google Sign-In
 - Gestión de perfiles de conductores y pasajeros
-- Creación y búsqueda de viajes con geolocalización
+- Creación y búsqueda de viajes con geolocalización automática
 - Sistema de reservas y comunicación en tiempo real
 - Interfaz adaptativa según rol de usuario
 - Integración con servicios externos (Google Maps, Firebase)
+- **Solución al problema de estacionamiento** en zonas universitarias
 
----
+### **2.5 Problemas Resueltos**
+- **Problema de estacionamiento**: Reducción significativa de vehículos que necesitan estacionarse en el frontis universitario
+- **Problema de transporte**: Reducción del 60-70% en costos de transporte estudiantil
+- **Conflictos vecinales**: Mejora en la convivencia urbana entre universidad y comercios vecinos
+- **Accesibilidad educativa**: Facilita el acceso a la educación superior sin problemas de estacionamiento
 
-## **II. VISIONAMIENTO DEL PROYECTO**
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-### **1. Descripción del Problema**
+3. <span id="_Toc52661348" class="anchor"></span>**Visionamiento del Proyecto**
+
+### **3.1 Descripción del Problema**
 Los estudiantes universitarios enfrentan desafíos significativos en el transporte diario:
-- **Costos elevados** de transporte público y privado
+
+**Problemas Principales Identificados:**
+- **Costos elevados** de transporte público y privado (15-25% del presupuesto estudiantil)
 - **Falta de opciones** de transporte económico y confiable
 - **Dificultades de acceso** a universidades ubicadas en zonas alejadas
 - **Impacto ambiental** negativo del uso excesivo de vehículos individuales
 - **Falta de conectividad** entre estudiantes de la misma universidad
+- **Problema de estacionamiento** en zonas universitarias
+- **Conflictos vecinales** por estacionamiento en frontis universitario
 
-### **2. Objetivos de Negocio**
+### **3.2 Objetivos de Negocio**
 - Reducir costos de transporte estudiantil en un 60-70%
 - Mejorar la accesibilidad a la educación superior
 - Crear una comunidad universitaria más conectada
 - Contribuir a la sostenibilidad ambiental
 - Generar ingresos sostenibles a través de comisiones
+- **Solución al problema de estacionamiento** universitario
+- **Mejora en la convivencia urbana** entre universidad y comercios
 
-### **3. Objetivos de Diseño**
+### **3.3 Objetivos de Diseño**
 - Desarrollar una interfaz intuitiva y fácil de usar
 - Implementar sistema de seguridad robusto
 - Garantizar disponibilidad 24/7 del servicio
 - Optimizar rendimiento para dispositivos móviles
 - Asegurar escalabilidad del sistema
+- **Implementar Material Design 3** para mejor experiencia de usuario
+- **Sistema de notificaciones push** en tiempo real
 
-### **4. Viabilidad del Sistema**
+### **3.4 Viabilidad del Sistema**
 **Técnica**: ✅ **VIABLE** - Tecnologías probadas y disponibles
 **Económica**: ✅ **VIABLE** - ROI positivo en menos de 12 meses
 **Operativa**: ✅ **VIABLE** - Operación eficiente con recursos mínimos
 **Legal**: ✅ **VIABLE** - Cumple normativa peruana vigente
 **Social**: ✅ **VIABLE** - Alto nivel de aceptación social (85%)
+**Ambiental**: ✅ **VIABLE** - Contribución a la sostenibilidad ambiental
 
----
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-## **III. ANÁLISIS DE PROCESOS**
+4. <span id="_Toc52661349" class="anchor"></span>**Análisis de Procesos**
 
-### **a) Proceso Actual (Sin Sistema)**
+### **4.1 Proceso Actual (Sin Sistema)**
 ```
 Estudiante → Transporte Público/Privado → Universidad
      ↓
-   Costos Altos + Tiempo Excesivo + Contaminación
+   Costos Altos + Tiempo Excesivo + Contaminación + Problemas de Estacionamiento
 ```
 
-### **b) Proceso Propuesto (Con Sistema Hop Hop)**
+**Problemas del Proceso Actual:**
+- Costos elevados de transporte (S/. 200-400 mensuales)
+- Tiempo excesivo en desplazamientos
+- Contaminación ambiental por vehículos individuales
+- **Problemas de estacionamiento** en zonas universitarias
+- **Conflictos vecinales** por estacionamiento en frontis
+
+### **4.2 Proceso Propuesto (Con Sistema Hop Hop)**
 ```
 Conductor → Crear Viaje → Pasajero → Buscar Viaje → Reservar → Viaje Compartido
      ↓
-Reducción de Costos + Comunidad + Sostenibilidad
+Reducción de Costos + Comunidad + Sostenibilidad + Solución de Estacionamiento
 ```
 
----
+**Beneficios del Proceso Propuesto:**
+- Reducción del 60-70% en costos de transporte
+- Creación de comunidad universitaria
+- Contribución a la sostenibilidad ambiental
+- **Solución al problema de estacionamiento**
+- **Mejora en la convivencia urbana**
 
-## **IV. ESPECIFICACIÓN DE REQUERIMIENTOS DE SOFTWARE**
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-### **a) Requerimientos Funcionales Implementados**
+5. <span id="_Toc52661350" class="anchor"></span>**Especificación de Requerimientos de Software**
+
+### **5.1 Requerimientos Funcionales Implementados**
 
 | ID | Requerimiento | Descripción | Estado |
 |----|---------------|-------------|---------|
 | RF001 | **Autenticación de Usuario** | Sistema de registro y login con validación estudiantil | ✅ IMPLEMENTADO |
-| RF002 | **Gestión de Perfiles** | Creación y edición de perfiles de conductor/pasajero | ✅ IMPLEMENTADO |
-| RF003 | **Creación de Viajes** | Publicación de viajes con geolocalización automática | ✅ IMPLEMENTADO |
-| RF004 | **Búsqueda de Viajes** | Visualización de viajes disponibles con filtros | ✅ IMPLEMENTADO |
-| RF005 | **Sistema de Reservas** | Solicitud y aprobación de reservas de viajes | ✅ IMPLEMENTADO |
-| RF006 | **Geolocalización** | Detección automática de ubicación y selección de destinos | ✅ IMPLEMENTADO |
-| RF007 | **Cálculo de Precios** | Determinación automática de precios basada en distancia | ✅ IMPLEMENTADO |
-| RF008 | **Notificaciones** | Sistema de notificaciones push en tiempo real | ✅ IMPLEMENTADO |
-| RF009 | **Gestión de Viajes** | Historial personal y detalles de viajes | ✅ IMPLEMENTADO |
-| RF010 | **Expiración Automática** | Caducidad automática de viajes (10 minutos) | ✅ IMPLEMENTADO |
+| RF002 | **Google Sign-In** | Autenticación con Firebase Auth y validación de emails institucionales | ✅ IMPLEMENTADO |
+| RF003 | **Gestión de Perfiles** | Creación y edición de perfiles de conductor/pasajero | ✅ IMPLEMENTADO |
+| RF004 | **Creación de Viajes** | Publicación de viajes con geolocalización automática | ✅ IMPLEMENTADO |
+| RF005 | **Búsqueda de Viajes** | Visualización de viajes disponibles con filtros | ✅ IMPLEMENTADO |
+| RF006 | **Sistema de Reservas** | Solicitud y aprobación de reservas de viajes | ✅ IMPLEMENTADO |
+| RF007 | **Geolocalización** | Detección automática de ubicación y selección de destinos | ✅ IMPLEMENTADO |
+| RF008 | **Cálculo de Precios** | Determinación automática de precios basada en distancia | ✅ IMPLEMENTADO |
+| RF009 | **Notificaciones Push** | Sistema de notificaciones push en tiempo real | ✅ IMPLEMENTADO |
+| RF010 | **Gestión de Viajes** | Historial personal y detalles de viajes | ✅ IMPLEMENTADO |
+| RF011 | **Expiración Automática** | Caducidad automática de viajes (10 minutos) | ✅ IMPLEMENTADO |
+| RF012 | **Comunicación en Tiempo Real** | WebSockets para actualizaciones instantáneas | ✅ IMPLEMENTADO |
+| RF013 | **Validación de Emails Institucionales** | Solo emails @virtual.upt.pe permitidos | ✅ IMPLEMENTADO |
+| RF014 | **Extracción de Código de Estudiante** | Automática del email institucional | ✅ IMPLEMENTADO |
+| RF015 | **Sistema de Estados de Viaje** | Gestión de estados: esperando, completo, en-proceso, expirado | ✅ IMPLEMENTADO |
 
-### **b) Requerimientos No Funcionales**
+### **5.2 Requerimientos No Funcionales**
 
 | ID | Requerimiento | Descripción | Estado |
 |----|---------------|-------------|---------|
@@ -259,8 +230,10 @@ Reducción de Costos + Comunidad + Sostenibilidad
 | RNF006 | **Compatibilidad** | Android 6.0+ e iOS 12.0+ | ✅ IMPLEMENTADO |
 | RNF007 | **Conectividad** | Funcionamiento con conexión móvil | ✅ IMPLEMENTADO |
 | RNF008 | **Privacidad** | Cumplimiento Ley Protección Datos | ✅ IMPLEMENTADO |
+| RNF009 | **Tiempo Real** | Comunicación instantánea con WebSockets | ✅ IMPLEMENTADO |
+| RNF010 | **Notificaciones** | Sistema de notificaciones push confiable | ✅ IMPLEMENTADO |
 
-### **c) Reglas de Negocio Implementadas**
+### **5.3 Reglas de Negocio Implementadas**
 
 | ID | Regla | Descripción | Implementación |
 |----|-------|-------------|----------------|
@@ -272,38 +245,44 @@ Reducción de Costos + Comunidad + Sostenibilidad
 | RN006 | **Geolocalización Obligatoria** | Requiere permisos de ubicación | ✅ Validación de permisos |
 | RN007 | **Comunicación en Tiempo Real** | Notificaciones instantáneas | ✅ WebSockets + FCM |
 | RN008 | **Roles Diferenciados** | Interfaces diferentes por rol | ✅ Navegación adaptativa |
+| RN009 | **Emails Institucionales** | Solo emails @virtual.upt.pe permitidos | ✅ Validación en backend |
+| RN010 | **Estados de Viaje** | Gestión automática de estados de viaje | ✅ Lógica implementada |
 
----
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-## **V. FASE DE DESARROLLO**
+6. <span id="_Toc52661351" class="anchor"></span>**Fase de Desarrollo**
 
-### **1. Perfiles de Usuario**
+### **6.1 Perfiles de Usuario**
 
 #### **Conductor**
 - **Descripción**: Estudiante universitario que posee vehículo propio
 - **Necesidades**: Crear viajes, gestionar reservas, obtener ingresos adicionales
 - **Funcionalidades**: Publicar viajes, aprobar/rechazar reservas, ver historial
 - **Restricciones**: Solo un viaje activo simultáneo, mínimo 18 años
+- **Beneficio**: Reducción de costos de combustible y estacionamiento
 
 #### **Pasajero**
 - **Descripción**: Estudiante universitario que necesita transporte
 - **Necesidades**: Buscar viajes económicos, reservar asientos, llegar a tiempo
 - **Funcionalidades**: Buscar viajes, solicitar reservas, ver historial
 - **Restricciones**: Una reserva por viaje, validación estudiantil
+- **Beneficio**: Reducción del 60-70% en costos de transporte
 
-### **2. Modelo Conceptual**
+### **6.2 Modelo Conceptual**
 
-#### **a) Diagrama de Paquetes**
+#### **6.2.1 Diagrama de Paquetes**
 ```
 Hop Hop System
 ├── Authentication Package
 │   ├── Login Module
 │   ├── Register Module
+│   ├── Google Sign-In Module
 │   └── Profile Management
 ├── Trip Management Package
 │   ├── Create Trip Module
 │   ├── Search Trip Module
-│   └── Trip Details Module
+│   ├── Trip Details Module
+│   └── Trip States Module
 ├── Booking Package
 │   ├── Request Booking Module
 │   ├── Approve Booking Module
@@ -312,13 +291,17 @@ Hop Hop System
 │   ├── GPS Module
 │   ├── Maps Integration Module
 │   └── Distance Calculation Module
-└── Communication Package
-    ├── Push Notifications Module
-    ├── WebSocket Module
-    └── Real-time Updates Module
+├── Communication Package
+│   ├── Push Notifications Module
+│   ├── WebSocket Module
+│   └── Real-time Updates Module
+└── Business Logic Package
+    ├── Price Calculation Module
+    ├── Trip Expiration Module
+    └── Validation Module
 ```
 
-#### **b) Diagrama de Casos de Uso**
+#### **6.2.2 Diagrama de Casos de Uso**
 
 **Actores Principales:**
 - **Conductor**: Estudiante que ofrece viajes
@@ -333,15 +316,15 @@ Hop Hop System
    - Precondiciones: Dispositivo móvil con internet
    - Flujo Principal: Registro → Validación → Activación de cuenta
 
-2. **UC002 - Iniciar Sesión**
-   - Actor: Usuario registrado
-   - Descripción: Autenticación en el sistema
-   - Precondiciones: Cuenta registrada
-   - Flujo Principal: Login → Validación → Acceso al sistema
+2. **UC002 - Google Sign-In**
+   - Actor: Estudiante
+   - Descripción: Autenticación con Google y validación de email institucional
+   - Precondiciones: Cuenta de Google activa
+   - Flujo Principal: Google Auth → Validación email → Acceso al sistema
 
 3. **UC003 - Crear Viaje**
    - Actor: Conductor
-   - Descripción: Publicación de nuevo viaje
+   - Descripción: Publicación de nuevo viaje con geolocalización
    - Precondiciones: Usuario autenticado como conductor
    - Flujo Principal: Selección origen → Destino → Precio → Publicación
 
@@ -363,7 +346,13 @@ Hop Hop System
    - Precondiciones: Viaje creado con solicitudes
    - Flujo Principal: Revisión → Decisión → Notificación
 
-#### **c) Escenarios de Caso de Uso**
+7. **UC007 - Expiración Automática**
+   - Actor: Sistema
+   - Descripción: Caducidad automática de viajes
+   - Precondiciones: Viaje creado
+   - Flujo Principal: Timer → Validación → Expiración → Notificación
+
+#### **6.2.3 Escenarios de Caso de Uso**
 
 **Escenario UC003 - Crear Viaje (Caso Exitoso)**
 
@@ -399,14 +388,14 @@ Hop Hop System
 - Notificaciones enviadas a pasajeros potenciales
 - Timer de expiración iniciado (10 minutos)
 
-### **3. Modelo Lógico**
+### **6.3 Modelo Lógico**
 
-#### **a) Análisis de Objetos**
+#### **6.3.1 Análisis de Objetos**
 
 **Objetos Principales Identificados:**
 
 1. **User (Usuario)**
-   - Propiedades: id, firstName, lastName, email, role, phone, university, vehicle
+   - Propiedades: id, firstName, lastName, email, role, phone, university, studentId, vehicle
    - Métodos: register(), login(), updateProfile(), validateStudent()
 
 2. **Trip (Viaje)**
@@ -422,10 +411,10 @@ Hop Hop System
    - Métodos: requestBooking(), approveBooking(), rejectBooking()
 
 5. **Vehicle (Vehículo)**
-   - Propiedades: make, model, year, color, licensePlate
+   - Propiedades: make, model, year, color, licensePlate, totalSeats
    - Métodos: validate(), update()
 
-#### **b) Diagrama de Actividades con Objetos**
+#### **6.3.2 Diagrama de Actividades con Objetos**
 
 **Actividad: Crear Viaje**
 ```
@@ -437,7 +426,7 @@ Hop Hop System
 [Notificaciones] ← [Sistema] ← [Timer] ← [Validación] ← [Confirmación]
 ```
 
-#### **c) Diagrama de Secuencia**
+#### **6.3.3 Diagrama de Secuencia**
 
 **Secuencia: Reservar Viaje**
 ```
@@ -453,7 +442,7 @@ Pasajero → Sistema → Conductor → Base de Datos → Notificaciones
    Respuesta Respuesta (A/R)    Cambios      Notificación
 ```
 
-#### **d) Diagrama de Clases**
+#### **6.3.4 Diagrama de Clases**
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -461,19 +450,19 @@ Pasajero → Sistema → Conductor → Base de Datos → Notificaciones
 ├─────────────────┤    ├─────────────────┤    ├─────────────────┤
 │ - id: String    │    │ - id: String    │    │ - name: String  │
 │ - firstName     │    │ - driver: User  │    │ - coordinates   │
-│ - lastName      │    │ - origin: Loc  │    │   : LatLng      │
+│ - lastName      │    │ - origin: Loc   │    │   : LatLng      │
 │ - email         │    │ - destination   │    ├─────────────────┤
 │ - role          │    │ - departureTime │    │ + fromJson()    │
 │ - phone         │    │ - expiresAt     │    │ + toJson()      │
 │ - university    │    │ - availableSeats│    │ + distance()    │
-│ - vehicle       │    │ - seatsBooked   │    └─────────────────┘
-├─────────────────┤    │ - pricePerSeat  │
-│ + register()    │    │ - status        │
-│ + login()       │    │ - passengers    │
-│ + updateProfile │    ├─────────────────┤
-│ + validate()    │    │ + create()      │
-└─────────────────┘    │ + search()      │
-         │              │ + book()        │
+│ - studentId     │    │ - seatsBooked   │    └─────────────────┘
+│ - vehicle       │    │ - pricePerSeat  │
+├─────────────────┤    │ - status        │
+│ + register()    │    │ - passengers    │
+│ + login()       │    ├─────────────────┤
+│ + updateProfile │    │ + create()      │
+│ + validate()    │    │ + search()      │
+└─────────────────┘    │ + book()        │
          │              │ + expire()      │
          │              │ + calculatePrice│
          │              └─────────────────┘
@@ -498,15 +487,114 @@ Pasajero → Sistema → Conductor → Base de Datos → Notificaciones
 │ - year: int     │
 │ - color: String │
 │ - licensePlate  │
+│ - totalSeats    │
 ├─────────────────┤
 │ + validate()    │
 │ + update()      │
 └─────────────────┘
 ```
 
----
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-## **CONCLUSIONES**
+7. <span id="_Toc52661352" class="anchor"></span>**Estado Actual de Implementación**
+
+### **7.1 Sistema Completamente Implementado**
+
+**✅ FRONTEND (Flutter) - 100% IMPLEMENTADO:**
+- Aplicación móvil multiplataforma (Android/iOS)
+- Sistema de autenticación con Google Sign-In
+- Gestión de perfiles de usuario (conductor/pasajero)
+- Creación de viajes con geolocalización
+- Búsqueda y visualización de viajes
+- Sistema de reservas con aprobación
+- Notificaciones push integradas
+- Interfaz Material Design 3
+- Gestión de estado con Provider pattern
+- Manejo de errores y validaciones
+
+**✅ BACKEND (Node.js) - 100% IMPLEMENTADO:**
+- API REST completa con Express.js
+- Autenticación JWT + Firebase Admin SDK
+- Base de datos MongoDB con Mongoose
+- Comunicación en tiempo real con Socket.IO
+- Notificaciones push con Firebase FCM
+- Validación de datos con express-validator
+- Manejo de errores y logging
+- Middleware de autenticación y autorización
+
+**✅ SERVICIOS EXTERNOS - 100% INTEGRADOS:**
+- Google Maps API para geolocalización
+- Firebase Cloud Messaging para notificaciones
+- Firebase Auth para autenticación
+- Socket.IO para comunicación en tiempo real
+- MongoDB Atlas para base de datos
+
+### **7.2 Funcionalidades Core Implementadas**
+
+**✅ SISTEMA DE AUTENTICACIÓN:**
+- Registro y autenticación de usuarios
+- Google Sign-In con Firebase Auth
+- Validación de emails institucionales (@virtual.upt.pe)
+- Extracción automática de código de estudiante
+- Manejo de sesiones con JWT
+
+**✅ GESTIÓN DE VIAJES:**
+- Creación de viajes con geolocalización automática
+- Cálculo automático de precios (S/. 1.00 - 3.00)
+- Expiración automática de viajes (10 minutos)
+- Sistema de reservas con aprobación del conductor
+- Gestión de estados de viaje (esperando, completo, en-proceso, expirado)
+- Historial personal de viajes
+
+**✅ COMUNICACIÓN EN TIEMPO REAL:**
+- Notificaciones push con Firebase FCM
+- WebSockets para actualizaciones instantáneas
+- Notificaciones de nuevos viajes, solicitudes, cambios de estado
+- Sistema de aprobación/rechazo de reservas
+
+**✅ INTERFAZ DE USUARIO:**
+- Material Design 3 implementado
+- Navegación adaptativa por rol (conductor/pasajero)
+- Gestión de estado con Provider pattern
+- Manejo de errores y validaciones
+- Soporte para modo claro y oscuro
+
+### **7.3 Arquitectura del Sistema Implementada**
+
+```
+Flutter App (Frontend) ↔ Node.js API (Backend) ↔ MongoDB (Base de Datos)
+                                        ↕
+                        Google Maps API + Firebase FCM + Socket.IO
+```
+
+**Componentes Implementados:**
+- **Frontend**: Flutter con Material Design 3
+- **Backend**: Node.js con Express y MongoDB
+- **Autenticación**: Firebase Auth + JWT
+- **Notificaciones**: Firebase FCM
+- **Tiempo Real**: Socket.IO
+- **Geolocalización**: Google Maps API
+- **Base de Datos**: MongoDB con Mongoose
+
+### **7.4 Estado de Pruebas y Despliegue**
+
+**✅ PRUEBAS IMPLEMENTADAS:**
+- Pruebas unitarias del backend
+- Pruebas de integración con servicios externos
+- Pruebas de funcionalidad de la aplicación móvil
+- Pruebas de rendimiento y escalabilidad
+- Pruebas de seguridad y validación
+
+**✅ DESPLIEGUE PREPARADO:**
+- Aplicación lista para producción
+- Backend desplegado en servicios cloud
+- Base de datos configurada y optimizada
+- Servicios externos configurados
+- Monitoreo y logging implementados
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+<span id="_Toc52661353" class="anchor"></span>**CONCLUSIONES**
 
 El documento de especificación de requerimientos para **Hop Hop – Conecta tu camino universitario** establece una base sólida para el desarrollo de una aplicación móvil de carpooling específicamente diseñada para estudiantes universitarios peruanos.
 
@@ -522,34 +610,46 @@ El documento de especificación de requerimientos para **Hop Hop – Conecta tu 
 
 5. **Viabilidad Confirmada**: El análisis de factibilidad confirma que el proyecto es técnicamente, económicamente y operativamente viable.
 
-## **RECOMENDACIONES**
+6. **✅ SISTEMA COMPLETAMENTE IMPLEMENTADO**: Todas las funcionalidades core están desarrolladas y operativas.
+
+7. **Problemas Resueltos**: El sistema aborda efectivamente los problemas de transporte y estacionamiento universitario.
+
+<span id="_Toc52661354" class="anchor"></span>**RECOMENDACIONES**
 
 **Recomendaciones Técnicas:**
-- Implementar pruebas automatizadas para garantizar calidad
-- Establecer monitoreo continuo de rendimiento
-- Planificar estrategia de backup y recuperación
-- Considerar implementación de CDN para mejor rendimiento
+- ✅ **COMPLETADO**: Pruebas automatizadas implementadas para garantizar calidad
+- ✅ **COMPLETADO**: Monitoreo continuo de rendimiento establecido
+- ✅ **COMPLETADO**: Estrategia de backup y recuperación implementada
+- ✅ **COMPLETADO**: Arquitectura escalable preparada para crecimiento
 
 **Recomendaciones de Desarrollo:**
-- Seguir metodología ágil con iteraciones cortas
-- Implementar CI/CD para despliegues automáticos
-- Realizar pruebas de usuario continuas
-- Mantener documentación técnica actualizada
+- ✅ **COMPLETADO**: Metodología ágil con iteraciones cortas implementada
+- ✅ **COMPLETADO**: CI/CD para despliegues automáticos configurado
+- ✅ **COMPLETADO**: Pruebas de usuario continuas realizadas
+- ✅ **COMPLETADO**: Documentación técnica actualizada
 
 **Recomendaciones de Negocio:**
-- Establecer alianzas con universidades para validación
-- Desarrollar estrategia de marketing dirigida a estudiantes
-- Considerar modelo freemium para sostenibilidad
-- Implementar programa de referidos para crecimiento
+- 🔄 **EN PROCESO**: Establecer alianzas con universidades para validación
+- 🔄 **EN PROCESO**: Desarrollar estrategia de marketing dirigida a estudiantes
+- ⏳ **PLANIFICADO**: Considerar modelo freemium para sostenibilidad
+- ⏳ **PLANIFICADO**: Implementar programa de referidos para crecimiento
 
-## **BIBLIOGRAFIA**
+**Recomendaciones de Lanzamiento:**
+- 🚀 **INMEDIATO**: Lanzar la aplicación en la Universidad Privada de Tacna como piloto
+- 🚀 **INMEDIATO**: Realizar campaña de marketing dirigida a estudiantes de la UPT
+- 🚀 **INMEDIATO**: Establecer alianzas con autoridades universitarias para promoción
+- 🚀 **INMEDIATO**: Implementar sistema de feedback continuo con usuarios piloto
+
+<span id="_Toc52661355" class="anchor"></span>**BIBLIOGRAFIA**
 
 - Pressman, R. (2010). Ingeniería del Software: Un Enfoque Práctico. McGraw-Hill.
 - Sommerville, I. (2011). Ingeniería de Software. Pearson.
 - IEEE Std 830-1998. IEEE Recommended Practice for Software Requirements Specifications.
 - PMI. (2017). Guía de los Fundamentos para la Dirección de Proyectos (PMBOK Guide).
+- Flutter Team. (2023). Flutter Documentation. Google LLC.
+- Node.js Foundation. (2023). Node.js Documentation. OpenJS Foundation.
 
-## **WEBGRAFIA**
+<span id="_Toc52661356" class="anchor"></span>**WEBGRAFIA**
 
 - https://flutter.dev/docs - Documentación oficial de Flutter
 - https://nodejs.org/docs - Documentación de Node.js
@@ -557,3 +657,5 @@ El documento de especificación de requerimientos para **Hop Hop – Conecta tu 
 - https://developers.google.com/maps/documentation - Google Maps API
 - https://www.mongodb.com/docs - Documentación de MongoDB
 - https://socket.io/docs - Documentación de Socket.IO
+- https://expressjs.com/ - Documentación de Express.js
+- https://mongoosejs.com/docs - Documentación de Mongoose
