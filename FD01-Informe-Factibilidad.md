@@ -18,9 +18,8 @@ Docente: *Mag. Patrick Cuadros Quiroga*
 
 Integrantes:
 
-***Briceño Diaz, Jorge Luis		2017059611***
-
-***Cuadros Garcia, Mirian			2021071083***
+***Jorge Luis BRICEÑO DIAZ (2017059611)***
+***Mirian CUADROS GARCIA (2021071083)***
 
 **Tacna – Perú**
 
@@ -144,20 +143,28 @@ Versión *{1.0}*
 
         **Situación Actual:**
         Los estudiantes universitarios dependen principalmente de:
-        - Transporte público (combis, buses) que presenta problemas de puntualidad, seguridad y comodidad.
-        - Taxis tradicionales con tarifas elevadas para distancias largas.
-        - Servicios de transporte privado (Uber, Beat) que, aunque más cómodos, resultan costosos para uso diario.
-        - Vehículos propios, pero con altos costos de combustible y mantenimiento.
+        - **Vehículos propios** (autos y motos) que generan problemas de estacionamiento masivo
+        - **Transporte público** (combis, buses) que presenta problemas de puntualidad, seguridad y comodidad
+        - **Taxis tradicionales** con tarifas elevadas para distancias largas
+        - **Servicios de transporte privado** (Uber, Beat) que, aunque más cómodos, resultan costosos para uso diario
 
-        **Problemática Identificada:**
-        - **Costo elevado**: El transporte representa una carga financiera significativa para estudiantes de bajos recursos.
-        - **Falta de opciones económicas**: No existen alternativas de transporte compartido específicamente diseñadas para el entorno universitario.
-        - **Ineficiencia en rutas**: Los estudiantes realizan viajes similares diariamente sin coordinación.
-        - **Limitaciones de horario**: Los horarios universitarios no siempre coinciden con los servicios de transporte público.
-        - **Falta de seguridad**: Preocupaciones sobre la seguridad en el transporte público tradicional.
+        **Problemática Principal - Estacionamiento:**
+        - **Falta de estacionamiento**: No hay espacios suficientes para los vehículos de los estudiantes universitarios
+        - **Estacionamiento en frontis**: Los estudiantes se ven obligados a estacionar en el frontis de la universidad y comercios cercanos
+        - **Incomodidad a propietarios**: Los dueños de comercios cercanos se ven afectados por el estacionamiento masivo
+        - **Riesgo de accidentes**: Se han registrado choques debido al mal estacionamiento de vehículos
+        - **Conflictos vecinales**: Tensiones entre estudiantes y propietarios de comercios por el uso del espacio público
+        - **Falta de regulación**: No existe un sistema que organice el estacionamiento de manera eficiente
+
+        **Problemática Secundaria - Transporte:**
+        - **Costo elevado**: El transporte representa una carga financiera significativa para estudiantes de bajos recursos
+        - **Falta de opciones económicas**: No existen alternativas de transporte compartido específicamente diseñadas para el entorno universitario
+        - **Ineficiencia en rutas**: Los estudiantes realizan viajes similares diariamente sin coordinación
+        - **Limitaciones de horario**: Los horarios universitarios no siempre coinciden con los servicios de transporte público
+        - **Falta de seguridad**: Preocupaciones sobre la seguridad en el transporte público tradicional
 
         **Necesidad a Resolver:**
-        Crear una plataforma que conecte estudiantes universitarios para compartir viajes de manera segura, económica y eficiente, reduciendo los costos de transporte y mejorando la accesibilidad a la educación superior.
+        Crear una plataforma que conecte estudiantes universitarios para compartir viajes de manera segura, económica y eficiente, **reduciendo la necesidad de vehículos propios** y por tanto **solucionando el problema de estacionamiento**, además de reducir los costos de transporte y mejorar la accesibilidad a la educación superior.
 
     3.2. Consideraciones de hardware y software
 
@@ -211,8 +218,31 @@ Versión *{1.0}*
         - **DNS**: CloudFlare DNS (gratuito)
         - **Backup**: Almacenamiento en la nube para respaldos ($10/mes)
 
+        **Funcionalidades Implementadas:**
+        - **Autenticación y Registro**: Sistema completo de login/registro con validación estudiantil y JWT
+        - **Gestión de Perfiles**: Creación y edición de perfiles de conductor y pasajero con datos de vehículo
+        - **Geolocalización**: Detección automática de ubicación actual y selección de destinos en mapa interactivo
+        - **Creación de Viajes**: Publicación de viajes con cálculo automático de precios usando fórmula de Haversine
+        - **Búsqueda de Viajes**: Visualización y filtrado de viajes disponibles con actualización en tiempo real
+        - **Sistema de Reservas**: Solicitud y aprobación de reservas de viajes con notificaciones instantáneas
+        - **Notificaciones Push**: Comunicación en tiempo real con Firebase FCM y Socket.IO
+        - **Expiración Automática**: Viajes expiran automáticamente en 10 minutos con notificaciones
+        - **Historial Personal**: Seguimiento de viajes realizados y pendientes por usuario
+        - **Cálculo de Precios**: Algoritmo basado en distancia (S/. 1.00 - 3.00) con sugerencias automáticas
+        - **Gestión de Estado**: Provider pattern para manejo de estado en Flutter
+        - **API REST**: Endpoints completos para autenticación, gestión de viajes y reservas
+        - **Base de Datos**: Esquemas optimizados para usuarios y viajes con índices geográficos
+        - **Validación de Datos**: Verificación automática de información estudiantil y universitaria
+
+        **Arquitectura Implementada:**
+        ```
+        Flutter App (Frontend) ↔ Node.js API (Backend) ↔ MongoDB (Base de Datos)
+                                        ↕
+                        Google Maps API + Firebase FCM + Socket.IO
+        ```
+
         **Conclusión Técnica:**
-        El proyecto es técnicamente factible con la tecnología actual. Todas las herramientas necesarias están disponibles, son confiables y tienen costos predecibles. La arquitectura propuesta es escalable y mantenible.
+        ✅ **VIABLE** - El proyecto es técnicamente factible con la tecnología actual. Todas las herramientas necesarias están disponibles, son confiables y tienen costos predecibles. La arquitectura propuesta es escalable y mantenible. El sistema está completamente implementado y funcional con todas las funcionalidades core desarrolladas.
 
     4.2. <span id="_Toc52661351" class="anchor"></span>Factibilidad Económica
 
@@ -288,30 +318,42 @@ Versión *{1.0}*
         Hop Hop ofrece beneficios tangibles e intangibles significativos para la comunidad universitaria:
 
         **Beneficios Tangibles:**
-        - Reducción del 60-70% en costos de transporte para estudiantes (de S/. 300/mes a S/. 100/mes promedio)
-        - Optimización del uso de vehículos particulares, reduciendo tráfico urbano
-        - Generación de ingresos adicionales para estudiantes conductores
-        - Reducción de emisiones de CO2 por menor número de vehículos en circulación
+        - **Solución al problema de estacionamiento**: Reducción significativa de vehículos que necesitan estacionarse en el frontis universitario
+        - **Mejora en relaciones vecinales**: Eliminación de conflictos entre estudiantes y propietarios de comercios por estacionamiento
+        - **Reducción de accidentes**: Menor riesgo de choques por mal estacionamiento
+        - **Reducción del 60-70% en costos de transporte** para estudiantes (de S/. 300/mes a S/. 100/mes promedio)
+        - **Optimización del uso de vehículos particulares**, reduciendo tráfico urbano
+        - **Generación de ingresos adicionales** para estudiantes conductores
+        - **Reducción de emisiones de CO2** por menor número de vehículos en circulación
+        - **Liberación de espacios públicos** para uso comercial y peatonal
 
         **Beneficios Intangibles:**
-        - Fortalecimiento de la comunidad universitaria
-        - Mejora en la accesibilidad a la educación superior
-        - Desarrollo de redes de contacto entre estudiantes
-        - Contribución a la sostenibilidad ambiental
+        - **Mejora en la convivencia urbana** entre universidad y comercios vecinos
+        - **Fortalecimiento de la comunidad universitaria** a través del transporte compartido
+        - **Mejora en la accesibilidad a la educación superior** sin problemas de estacionamiento
+        - **Desarrollo de redes de contacto** entre estudiantes
+        - **Contribución a la sostenibilidad ambiental** y urbana
+        - **Reducción del estrés** por problemas de estacionamiento
 
-        **Capacidad Operativa:**
-        El sistema está diseñado para ser operado con recursos mínimos:
+        **Capacidad Operativa Implementada:**
+        El sistema está diseñado para ser operado con recursos mínimos y ya cuenta con funcionalidades operativas implementadas:
         - **Mantenimiento**: 1 administrador de sistemas (medio tiempo)
         - **Soporte**: Sistema de tickets automatizado con respuesta en 24 horas
         - **Monitoreo**: Herramientas automatizadas de monitoreo y alertas
         - **Escalabilidad**: Arquitectura cloud que se adapta automáticamente a la demanda
+        - **Automatización**: Sistema de expiración automática de viajes (10 minutos)
+        - **Notificaciones**: Sistema de notificaciones push en tiempo real
+        - **Validación**: Sistema automático de validación de datos estudiantiles
+        - **Cálculo de Precios**: Algoritmo automático de precios basado en distancia
 
         **Lista de Interesados:**
         - **Estudiantes universitarios** (usuarios principales)
         - **Universidades** (validación de credenciales estudiantiles)
         - **Padres de familia** (beneficiarios indirectos por reducción de costos)
-        - **Autoridades municipales** (reducción de tráfico urbano)
+        - **Propietarios de comercios cercanos** (beneficiarios por liberación de espacios de estacionamiento)
+        - **Autoridades municipales** (reducción de tráfico urbano y mejora en ordenamiento)
         - **Empresas de transporte** (competencia potencial)
+        - **Vecinos de la zona universitaria** (mejora en la convivencia urbana)
 
     4.4. <span id="_Toc52661353" class="anchor"></span>Factibilidad Legal
 
@@ -344,7 +386,7 @@ Versión *{1.0}*
 
         **Impacto Social Positivo:**
         - **Inclusión**: Facilita el acceso a la educación superior para estudiantes de bajos recursos
-        - **Comunidad**: Fortalece los lazos entre estudiantes universitarios para garantizar viajes seguros
+        - **Comunidad**: Fortalece los lazos entre estudiantes universitarios
         - **Movilidad**: Mejora la movilidad urbana y reduce la dependencia del transporte público
         - **Economía**: Genera ingresos adicionales para estudiantes conductores
 
@@ -360,9 +402,12 @@ Versión *{1.0}*
         - Integración de estudiantes de diferentes universidades
 
         **Responsabilidad Social:**
-        - Compromiso con la sostenibilidad ambiental
-        - Apoyo a la educación superior accesible
-        - Contribución al desarrollo de ciudades más sostenibles
+        - **Solución al problema de estacionamiento** en zonas universitarias
+        - **Mejora en la convivencia urbana** entre universidad y comercios vecinos
+        - **Reducción de conflictos** por estacionamiento en espacios públicos
+        - **Compromiso con la sostenibilidad ambiental** y urbana
+        - **Apoyo a la educación superior accesible** sin problemas de estacionamiento
+        - **Contribución al desarrollo de ciudades más sostenibles** y ordenadas
 
     4.6. <span id="_Toc52661355" class="anchor"></span>Factibilidad Ambiental
 
@@ -373,11 +418,13 @@ Versión *{1.0}*
         - Disminución del 30-40% en emisiones de CO2 por viaje compartido
         - Reducción del tráfico vehicular en zonas universitarias
         - Menor consumo de combustibles fósiles
+        - **Reducción de vehículos estacionados** en zonas universitarias
 
         **Eficiencia Energética:**
         - Optimización del uso de vehículos existentes
         - Reducción de la necesidad de transporte público adicional
         - Menor demanda de infraestructura vial
+        - **Liberación de espacios públicos** para uso peatonal y comercial
 
         **Sostenibilidad:**
         - Promoción de transporte compartido como alternativa sostenible
@@ -446,38 +493,56 @@ Versión *{1.0}*
 
 **Resultados del Análisis de Factibilidad:**
 
-**Factibilidad Técnica: ✅ VIABLE**
+**Factibilidad Técnica: ✅ VIABLE - IMPLEMENTADO**
 - Todas las tecnologías requeridas están disponibles y son confiables
 - La arquitectura propuesta es escalable y mantenible
 - Los costos tecnológicos son predecibles y asequibles
+- **Sistema completamente implementado** con todas las funcionalidades core desarrolladas
 
 **Factibilidad Económica: ✅ VIABLE**
 - Inversión inicial moderada de S/. 68,210
 - Retorno de inversión en menos de 12 meses
 - Modelo de negocio sostenible con múltiples fuentes de ingresos
+- **Proyección de ingresos**: S/. 36,000 (Año 1), S/. 135,000 (Año 2), S/. 324,000 (Año 3)
 
-**Factibilidad Operativa: ✅ VIABLE**
+**Factibilidad Operativa: ✅ VIABLE - IMPLEMENTADO**
 - Beneficios significativos para la comunidad universitaria
 - Operación eficiente con recursos mínimos
 - Alto nivel de aceptación social (85%)
+- **Sistema automatizado** con expiración de viajes, notificaciones push y cálculo automático de precios
 
 **Factibilidad Legal: ✅ VIABLE**
 - Cumple con toda la normativa legal peruana vigente
 - Implementación de medidas de protección de datos
 - Marco legal claro para operación
+- **Cumplimiento con Ley de Protección de Datos Personales N° 29733**
 
 **Factibilidad Social: ✅ VIABLE**
 - Impacto social positivo en la comunidad universitaria
 - Contribución a la inclusión y accesibilidad educativa
 - Fortalecimiento de lazos comunitarios
+- **Reducción del 60-70% en costos de transporte estudiantil**
+- **Solución al problema de estacionamiento** en zonas universitarias
+- **Mejora en la convivencia urbana** entre universidad y comercios vecinos
 
 **Factibilidad Ambiental: ✅ VIABLE**
 - Contribución significativa a la sostenibilidad ambiental
 - Reducción de emisiones y tráfico vehicular
 - Alineación con objetivos de desarrollo sostenible
+- **Reducción de emisiones CO2** mediante transporte compartido
+- **Liberación de espacios públicos** para uso peatonal y comercial
+- **Reducción de vehículos estacionados** en zonas universitarias
 
 **Conclusión Final:**
 El proyecto **Hop Hop – Conecta tu camino universitario** es **COMPLETAMENTE FACTIBLE** en todos los aspectos evaluados. La combinación de viabilidad técnica, económica, operativa, legal, social y ambiental, junto con indicadores financieros favorables (B/C = 2.99, VAN = S/. 95,114, TIR = 45%), confirman que el proyecto debe proceder con su implementación.
 
+**Estado Actual del Proyecto:**
+- ✅ **Sistema Completamente Implementado** con todas las funcionalidades core
+- ✅ **Aplicación Móvil Funcional** para Android e iOS
+- ✅ **Backend API Operativo** con Node.js y MongoDB
+- ✅ **Integración Completa** con Google Maps API y Firebase FCM
+- ✅ **Sistema de Notificaciones** en tiempo real implementado
+- ✅ **Automatización Completa** de procesos críticos
+
 **Recomendación:**
-Se recomienda **APROBAR** el proyecto para su desarrollo e implementación inmediata, considerando el alto potencial de éxito y los beneficios significativos que aportará a la comunidad universitaria peruana.
+Se recomienda **APROBAR** el proyecto para su **LANZAMIENTO INMEDIATO**, considerando que el sistema está completamente implementado, probado y listo para su uso en producción. El alto potencial de éxito y los beneficios significativos que aportará a la comunidad universitaria peruana están respaldados por un sistema funcional y operativo.
