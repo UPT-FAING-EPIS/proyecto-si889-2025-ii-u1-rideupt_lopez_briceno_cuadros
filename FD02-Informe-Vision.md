@@ -29,7 +29,6 @@ Integrantes:
 **  
 **
 </center>
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 # Sistema Hop Hop – Conecta tu camino universitario
 
