@@ -18,353 +18,57 @@ Docente: *Mag. Patrick Cuadros Quiroga*
 
 Integrantes:
 
-***Briceño Diaz, Jorge Luis		2017059611***
-
-***Cuadros Garcia, Mirian			2021071083***
+***Jorge Luis BRICEÑO DIAZ (2017059611)***
+***Mirian CUADROS GARCIA (2021071083)***
 
 **Tacna – Perú**
 
 ***2025***
 
-**\
+**  
 **
-
-  ----------- -------- ----------- ----------- ------------ ------------------------
-  CONTROL DE                                                
-  VERSIONES                                                 
-
-  Versión     Hecha    Revisada    Aprobada    Fecha        Motivo
-              por      por         por                      
-
-  1.0         MPV      ELV         ARV         10/10/2020   Versión Original
-  ----------- -------- ----------- ----------- ------------ ------------------------
+</center>
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 Sistema Hop Hop – Conecta tu camino universitario
 
 Documento de Arquitectura de Software
 
-Versión *{1.0}*
+Versión *{2.0}*
 
-**\
-**
+||CONTROL DE VERSIONES||||||
+|| :-: | :- | :- | :- | :- | :- |
+||Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
+||1\.0|JBD|MCG|JBD|22/10/2025|Versión Original|
+||2\.0|JBD|MCG|JBD|25/01/2025|Actualización con arquitectura implementada|
 
-  ----------- -------- ----------- ----------- ------------ ------------------------
-  CONTROL DE                                                
-  VERSIONES                                                 
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-  Versión     Hecha    Revisada    Aprobada    Fecha        Motivo
-              por      por         por                      
+# **INDICE GENERAL**
 
-  1.0         MPV      ELV         ARV         10/10/2020   Versión Original
-  ----------- -------- ----------- ----------- ------------ ------------------------
+[1. Introducción](#_Toc52661346)
 
-INDICE GENERAL
+[2. Objetivos y Restricciones Arquitectónicas](#_Toc52661347)
 
-# Contenido {#contenido .TOC-Heading}
+[3. Representación de la Arquitectura del Sistema](#_Toc52661348)
 
-[1. INTRODUCCIÓN [5](#_Toc68679729)](#_Toc68679729)
+[4. Atributos de Calidad del Software](#_Toc52661349)
 
-[1.1. Propósito (Diagrama 4+1) [5](#_Toc68679730)](#_Toc68679730)
+[5. Estado Actual de Implementación](#_Toc52661350)
 
-[1.2. Alcance [5](#_Toc68679731)](#_Toc68679731)
+[6. Conclusiones](#_Toc52661351)
 
-[1.3. Definición, siglas y abreviaturas
-[5](#_Toc68679732)](#_Toc68679732)
+[7. Recomendaciones](#_Toc52661352)
 
-[1.4. Organización del documento [5](#_Toc69808838)](#_Toc69808838)
+[8. Bibliografía](#_Toc52661353)
 
-[2. OBJETIVOS Y RESTRICCIONES ARQUITECTONICAS
-[5](#objetivos-y-restricciones-arquitectonicas)](#objetivos-y-restricciones-arquitectonicas)
+[9. Webgrafía](#_Toc52661354)
 
-[2.1.1. Requerimientos Funcionales
-[5](#requerimientos-funcionales)](#requerimientos-funcionales)
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-[2.1.2. Requerimientos No Funcionales -- Atributos de Calidad
-[5](#requerimientos-no-funcionales-atributos-de-calidad)](#requerimientos-no-funcionales-atributos-de-calidad)
+**<u>Informe de Arquitectura de Software</u>**
 
-[3. REPRESENTACIÓN DE LA ARQUITECTURA DEL SISTEMA
-[6](#representación-de-la-arquitectura-del-sistema)](#representación-de-la-arquitectura-del-sistema)
-
-[3.1. Vista de Caso de uso [6](#_Toc68679738)](#_Toc68679738)
-
-[3.1.1. Diagramas de Casos de uso
-[6](#diagramas-de-casos-de-uso)](#diagramas-de-casos-de-uso)
-
-[3.2. Vista Lógica [6](#_Toc68679739)](#_Toc68679739)
-
-[3.2.1. Diagrama de Subsistemas (paquetes)
-[7](#diagrama-de-subsistemas-paquetes)](#diagrama-de-subsistemas-paquetes)
-
-[3.2.2. Diagrama de Secuencia (vista de diseño)
-[7](#diagrama-de-secuencia-vista-de-diseño)](#diagrama-de-secuencia-vista-de-diseño)
-
-[3.2.3. Diagrama de Colaboración (vista de diseño)
-[7](#diagrama-de-colaboración-vista-de-diseño)](#diagrama-de-colaboración-vista-de-diseño)
-
-[3.2.4. Diagrama de Objetos
-[7](#diagrama-de-objetos)](#diagrama-de-objetos)
-
-[3.2.5. Diagrama de Clases
-[7](#diagrama-de-clases)](#diagrama-de-clases)
-
-[3.2.6. Diagrama de Base de datos (relacional o no relacional)
-[7](#diagrama-de-base-de-datos-relacional-o-no-relacional)](#diagrama-de-base-de-datos-relacional-o-no-relacional)
-
-[3.3. Vista de Implementación (vista de desarrollo)
-[7](#_Toc68679746)](#_Toc68679746)
-
-[3.3.1. Diagrama de arquitectura software (paquetes)
-[7](#diagrama-de-arquitectura-software-paquetes)](#diagrama-de-arquitectura-software-paquetes)
-
-[3.3.2. Diagrama de arquitectura del sistema (Diagrama de componentes)
-[7](#diagrama-de-arquitectura-del-sistema-diagrama-de-componentes)](#diagrama-de-arquitectura-del-sistema-diagrama-de-componentes)
-
-[3.4. Vista de procesos [7](#_Toc68679741)](#_Toc68679741)
-
-[3.4.1. Diagrama de Procesos del sistema (diagrama de actividad)
-[8](#diagrama-de-procesos-del-sistema-diagrama-de-actividad)](#diagrama-de-procesos-del-sistema-diagrama-de-actividad)
-
-[3.5. Vista de Despliegue (vista física)
-[8](#_Toc68679744)](#_Toc68679744)
-
-[3.5.1. Diagrama de despliegue
-[8](#diagrama-de-despliegue)](#diagrama-de-despliegue)
-
-[4. ATRIBUTOS DE CALIDAD DEL SOFTWARE
-[8](#atributos-de-calidad-del-software)](#atributos-de-calidad-del-software)
-
-[Escenario de Funcionalidad [8](#_Toc69808860)](#_Toc69808860)
-
-[Escenario de Usabilidad [8](#_Toc69808861)](#_Toc69808861)
-
-[Escenario de confiabilidad [9](#_Toc69808862)](#_Toc69808862)
-
-[Escenario de rendimiento [9](#_Toc69808863)](#_Toc69808863)
-
-[Escenario de mantenibilidad [9](#_Toc69808864)](#_Toc69808864)
-
-[Otros Escenarios [9](#_Toc69808865)](#_Toc69808865)
-
-1.  []{#_Toc68679729 .anchor}INTRODUCCIÓN
-
-    1.  []{#_Toc68679730 .anchor}Propósito (Diagrama 4+1)
-
-> *\[Se presenta una visión global y resumida de la arquitectura del
-> sistema y de los objetivos generales del diseño. Se describen las
-> influencias con los requisitos funcionales y no funcionales del
-> sistema y las decisiones y prioridades establecidas -- eficiencia vs.
-> Portabilidad, por ejemplo.\]*
-
-2.  []{#_Toc68679731 .anchor}Alcance
-
-> *\[El documento se centrará en el desarrollo de la vista lógica del
-> framework. Se incluyen los aspectos fundamentales del resto de las
-> vistas y se omiten aquellas que no se consideren pertinentes como ser
-> el caso de la vista de procesos.\]*
-
-3.  []{#_Toc68679732 .anchor}Definición, siglas y abreviaturas
-
-> *\[Este apartado proporciona las definiciones de todos los términos,
-> acrónimos y abreviaturas utilizadas a lo largo del documento y que
-> permiten una interpretación correcta del mismo. Se han de incluir los
-> términos técnicos, caso de uso por ejemplo, y los específicos del
-> entorno del sistema, lector de bandas por ejemplo. Es conveniente
-> ordenarlos alfabéticamente\]*
-
-4.  []{#_Toc69808838 .anchor}Organización del documento
-
-> *\[Aquí va la organización del proyecto\]*
-
-# **OBJETIVOS Y RESTRICCIONES ARQUITECTONICAS**
-
-> \[Establezca las prioridades de los requerimientos y las restricciones
-> del proyecto)
-
-1.  Priorización de requerimientos
-
-> *\[Se procede a desplegar los requerimientos funcionales y no
-> funcionales desde una perspectiva de priorización, mediante una tabla
-> resumen donde pueda desplegar los requerimientos del sistema de la
-> siguiente forma:*
-
-  -----------------------------------------------------------------------
-  *ID*       *Descripcion*                        *Prioridad*
-  ---------- ------------------------------------ -----------------------
-                                                  
-
-  -----------------------------------------------------------------------
-
-> *Asimismo con esta prioridad se definirá el orden de
-> implementación.\]*
-
-### Requerimientos Funcionales
-
-> *\[Definir la prioridad de los requerimientos funcionales.\]*
-
-  -----------------------------------------------------------------------
-  *ID*       *Descripcion*                        *Prioridad*
-  ---------- ------------------------------------ -----------------------
-                                                  
-
-  -----------------------------------------------------------------------
-
-### 
-
-### Requerimientos No Funcionales -- Atributos de Calidad
-
-> *\[Definir la prioridad de los requerimientos NO funcionales.\]*
-
-  -----------------------------------------------------------------------
-  *ID*       *Descripcion*                        *Prioridad*
-  ---------- ------------------------------------ -----------------------
-                                                  
-
-                                                  
-  -----------------------------------------------------------------------
-
-### 
-
-> *\[Los Atributos de Calidad (QAs) son propiedades medibles y
-> evaluables de un sistema, estas propiedades son usadas para indicar el
-> grado en que el sistema satisface las necesidades de los stakeholders
-> \[Wojcik 2013\].*
->
-> *Los QAs además son concebidos como aquellos requerimientos que no son
-> funcionales. De hecho, la funcionalidad es mayormente ortogonal a los
-> QAs; un diseño puede cumplir con la funcionalidad deseada y fallar a
-> la hora de satisfacer sus requerimientos de calidad. De esta manera,
-> se entiende a la funcionalidad como la capacidad del sistema para
-> hacer el trabajo para el cual fue pensado, independientemente de la
-> estructura.
-> Existen QAs mayormente usados que se suelen identificar en numerosos sistemas
-> y se tienen que describir, aunque la lista no es fina ya que muy a
-> menudo hay situaciones en que podrían identificarse y proponerse
-> nuevas propiedades para las diversas necesidades de stakeholders.\]*
-
-2.  Restricciones
-
-> *\[Aquí van las restricciones del proyecto\]*
-
-# **REPRESENTACIÓN DE LA ARQUITECTURA DEL SISTEMA**
-
-[]{#_Toc68679738 .anchor}
-
-1.  Vista de Caso de uso
-
-*\[En esta sección se describen los casos de uso del sistema (nombre de
-la aplicación), donde se abarcan todas las funcionalidades del sistema,
-se muestran los actores que interactúan en el sistema y las
-funcionalidades asociadas; asimismo se listará los casos de uso o
-escenarios del modelo de casos de uso que representen funcionalidades
-centrales del sistema final, que requieran una gran cobertura
-arquitectónica o aquellos que impliquen algún punto especialmente
-delicado de la arquitectura.*
-
-> *La documentación a incluir en esta sección corresponde a la obtenida
-> como consecuencia de la actividad "Realización de casos de uso":*
->
-> \- *Flujos de eventos- Diseño: descripción textual de cómo se realiza
-> el caso de uso en términos de los objetos que colaboran. Resumen de
-> los diagramas conectados con el caso de uso y explicación de sus
-> relaciones.*
->
-> \- *Diagramas de interacción: Diagramas de secuencia, Diagramas de
-> colaboración, objetos participantes, Diagramas de clases.*
->
-> \- *Requisitos derivados: Descripción textual que recoge todos los
-> requisitos, normalmente los no funcionales, de la realización del caso
-> de uso no que han de tenerse en cuenta durante la implementación\]*
-
-### Diagramas de Casos de uso
-
-> *La descripción de la estructura se ilustra utilizando un conjunto de
-> casos de uso escenarios lo que genera una nueva vista. Los escenarios
-> describen secuencia de iteraciones entre objetos y entre procesos. Se
-> utilizan para identificar y validar el diseño de arquitectura.*
-
-2.  []{#_Toc68679739 .anchor}Vista Lógica
-
-*\[La vista lógica se encarga de representar los requerimientos
-funcionales del sistema. Esta sección describe las partes del diseño del
-modelo significativas para la arquitectura, tales como subsistemas y
-paquetes.\]*
-
-### 
-
-### Diagrama de Subsistemas (paquetes)
-
-> *\[Diagrama que define los límites entre el sistema, o parte del
-> sistema, y su ambiente, mostrando las entidades que interactúan con
-> él. ​ Este diagrama es una vista de alto nivel de un sistema.*
->
-> *Asimismo, se debe desplegar las partes arquitectónicamente
-> significativas del modelo de diseño, como ser la descomposición en
-> capas, subsistemas o paquetes. Una vez presentadas estas unidades
-> lógicas principales, se profundiza en ellas hasta el nivel que se
-> considere adecuado.\]*
-
-2.  ### Diagrama de Secuencia (vista de diseño)
-
-3.  ### Diagrama de Colaboración (vista de diseño)
-
-4.  ### Diagrama de Objetos
-
-5.  ### Diagrama de Clases
-
-6.  ### Diagrama de Base de datos (relacional o no relacional)
-
-```{=html}
-<!-- -->
-```
-3.  []{#_Toc68679746 .anchor}Vista de Implementación (vista de
-    desarrollo)
-
-*\[Se detalla la estructura general del Modelo de Implementación y el
-mapeo de los subsistemas, paquetes y clases de la Vista Lógica a
-subsistemas y componentes de implementación de manera más detallada\]*
-
-### Diagrama de arquitectura software (paquetes)
-
-> *\[Se detalla la manera como fue implementado el sistema propuesto, se
-> describe visualmente las capas que tiene el sistema, como están
-> distribuidas y sus principales funciones\]*
-
-### Diagrama de arquitectura del sistema (Diagrama de componentes)
-
-> *\[Se detalla la manera como fue implementado el sistema propuesto, se
-> describe visualmente las capas que tiene el sistema, como están
-> distribuidas y sus principales funciones\]*
-
-4.  []{#_Toc68679741 .anchor}Vista de procesos
-
-> *\[Describe la descomposición del sistema procesos pesados. Indica que
-> procesos o grupos de procesos se comunican o interactúan entre sí y
-> los modos en que estos se comunican.\]*
-
-### Diagrama de Procesos del sistema (diagrama de actividad)
-
-> *\[Se realizará un diagrama del o los procesos del sistema donde se
-> exponga las actividades donde interviene el sistema propuesto,
-> adicionando diagramas que definan el detalle la descomposición del
-> sistema en procesos pesados. Indica que procesos o grupos de procesos
-> se comunican o interactúan entre sí y los modos en que estos se
-> comunican\]*
-
-5.  []{#_Toc68679744 .anchor}Vista de Despliegue (vista física)
-
-> *\[Se despliega uno o más escenarios de distribución física del
-> sistema sobre los cuales se ejecutará y hará el despliegue del mismo.
-> Muestra la comunicación entre los diferentes nodos que componen los
-> escenarios antes mencionados, así como el mapeo de los elementos de la
-> Vista de Procesos en dichos nodos\]*
-
-### Diagrama de despliegue
-
-> *\[un diagrama de despliegue, amplía el sistema de software y muestra
-> los contenedores (aplicaciones, almacenamiento de datos,
-> microservicios, etc.) que componen este sistema de software\]*
-
-# **1. INTRODUCCIÓN**
+1. <span id="_Toc52661346" class="anchor"></span>**Introducción**
 
 ## **1.1. Propósito (Diagrama 4+1)**
 
@@ -411,6 +115,8 @@ Se omiten detalles de implementación específicos de terceros y se enfoca en la
 | **REST** | Representational State Transfer - Estilo arquitectónico para servicios web |
 | **UI/UX** | User Interface/User Experience - Interfaz y experiencia de usuario |
 | **WebSocket** | Protocolo de comunicación bidireccional en tiempo real |
+| **UPT** | Universidad Privada de Tacna |
+| **Provider** | Patrón de gestión de estado en Flutter |
 
 ## **1.4. Organización del documento**
 
@@ -419,10 +125,11 @@ El documento está organizado de la siguiente manera:
 2. **Objetivos y Restricciones**: Priorización de requerimientos
 3. **Representación de la Arquitectura**: Vistas del sistema según patrón 4+1
 4. **Atributos de Calidad**: Escenarios de calidad del software
+5. **Estado Actual de Implementación**: Arquitectura implementada y funcional
 
----
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-# **2. OBJETIVOS Y RESTRICCIONES ARQUITECTÓNICAS**
+2. <span id="_Toc52661347" class="anchor"></span>**Objetivos y Restricciones Arquitectónicas**
 
 ## **2.1. Priorización de Requerimientos**
 
@@ -431,15 +138,17 @@ El documento está organizado de la siguiente manera:
 | ID | Descripción | Prioridad | Estado |
 |----|-------------|-----------|---------|
 | RF001 | Sistema de autenticación y registro | **CRÍTICA** | ✅ IMPLEMENTADO |
-| RF002 | Gestión de perfiles de usuario | **CRÍTICA** | ✅ IMPLEMENTADO |
-| RF003 | Creación de viajes con geolocalización | **CRÍTICA** | ✅ IMPLEMENTADO |
-| RF004 | Búsqueda y visualización de viajes | **CRÍTICA** | ✅ IMPLEMENTADO |
-| RF005 | Sistema de reservas y aprobaciones | **ALTA** | ✅ IMPLEMENTADO |
-| RF006 | Cálculo automático de precios | **ALTA** | ✅ IMPLEMENTADO |
-| RF007 | Notificaciones push en tiempo real | **ALTA** | ✅ IMPLEMENTADO |
-| RF008 | Historial personal de viajes | **MEDIA** | ✅ IMPLEMENTADO |
-| RF009 | Expiración automática de viajes | **MEDIA** | ✅ IMPLEMENTADO |
-| RF010 | Validación de permisos de ubicación | **MEDIA** | ✅ IMPLEMENTADO |
+| RF002 | Google Sign-In con Firebase Auth | **CRÍTICA** | ✅ IMPLEMENTADO |
+| RF003 | Gestión de perfiles de usuario | **CRÍTICA** | ✅ IMPLEMENTADO |
+| RF004 | Creación de viajes con geolocalización | **CRÍTICA** | ✅ IMPLEMENTADO |
+| RF005 | Búsqueda y visualización de viajes | **CRÍTICA** | ✅ IMPLEMENTADO |
+| RF006 | Sistema de reservas y aprobaciones | **ALTA** | ✅ IMPLEMENTADO |
+| RF007 | Cálculo automático de precios | **ALTA** | ✅ IMPLEMENTADO |
+| RF008 | Notificaciones push en tiempo real | **ALTA** | ✅ IMPLEMENTADO |
+| RF009 | Historial personal de viajes | **MEDIA** | ✅ IMPLEMENTADO |
+| RF010 | Expiración automática de viajes | **MEDIA** | ✅ IMPLEMENTADO |
+| RF011 | Validación de permisos de ubicación | **MEDIA** | ✅ IMPLEMENTADO |
+| RF012 | Comunicación en tiempo real con WebSockets | **ALTA** | ✅ IMPLEMENTADO |
 
 ### **Requerimientos No Funcionales - Atributos de Calidad**
 
@@ -453,6 +162,8 @@ El documento está organizado de la siguiente manera:
 | RNF006 | Compatibilidad: Android 6.0+ e iOS 12.0+ | **ALTA** | ✅ IMPLEMENTADO |
 | RNF007 | Conectividad: Funcionamiento con conexión móvil | **MEDIA** | ✅ IMPLEMENTADO |
 | RNF008 | Privacidad: Cumplimiento Ley Protección Datos | **MEDIA** | ✅ IMPLEMENTADO |
+| RNF009 | Tiempo Real: Comunicación instantánea con WebSockets | **ALTA** | ✅ IMPLEMENTADO |
+| RNF010 | Notificaciones: Sistema confiable de push notifications | **ALTA** | ✅ IMPLEMENTADO |
 
 ## **2.2. Restricciones Arquitectónicas**
 
@@ -462,22 +173,26 @@ El documento está organizado de la siguiente manera:
 - **APIs Externas**: Dependiente de Google Maps API y Firebase FCM
 - **Base de Datos**: MongoDB como única fuente de datos
 - **Lenguajes**: Flutter/Dart para frontend, Node.js/JavaScript para backend
+- **Autenticación**: JWT obligatorio para todas las operaciones
+- **Comunicación**: HTTPS obligatorio para todas las comunicaciones
 
 ### **Restricciones de Negocio**
 - **Usuarios**: Solo estudiantes universitarios verificados
 - **Precios**: Limitado a rango S/. 1.00 - 3.00 por viaje
 - **Geografía**: Disponible solo en ciudades universitarias principales
 - **Tiempo**: Viajes expiran automáticamente en 10 minutos
+- **Emails**: Solo emails institucionales @virtual.upt.pe permitidos
 
 ### **Restricciones de Seguridad**
 - **Autenticación**: JWT obligatorio para todas las operaciones
 - **Comunicación**: HTTPS obligatorio para todas las comunicaciones
 - **Datos**: Encriptación de datos sensibles
 - **Privacidad**: Cumplimiento con Ley de Protección de Datos Personales
+- **Validación**: Verificación de datos en múltiples capas
 
----
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-# **3. REPRESENTACIÓN DE LA ARQUITECTURA DEL SISTEMA**
+3. <span id="_Toc52661348" class="anchor"></span>**Representación de la Arquitectura del Sistema**
 
 ## **3.1. Vista de Caso de Uso**
 
@@ -524,6 +239,12 @@ El documento está organizado de la siguiente manera:
    - Esperar aprobación del conductor
    - Recibir notificación de resultado
 
+3. **Google Sign-In (Sistema)**:
+   - Autenticación con Firebase Auth
+   - Validación de email institucional
+   - Extracción automática de código de estudiante
+   - Creación automática de perfil
+
 ## **3.2. Vista Lógica**
 
 ### **Diagrama de Subsistemas (Paquetes)**
@@ -534,13 +255,15 @@ Hop Hop System
 │   ├── AuthProvider (State Management)
 │   ├── LoginScreen
 │   ├── RegisterScreen
+│   ├── GoogleSignInScreen
 │   └── AuthWrapper
 ├── Trip Management Layer
 │   ├── TripProvider (State Management)
 │   ├── CreateTripScreen
 │   ├── HomeScreen
 │   ├── TripDetailsScreen
-│   └── MyTripsScreen
+│   ├── MyTripsScreen
+│   └── DriverHomeScreen
 ├── Location Services Layer
 │   ├── Geolocator Service
 │   ├── Google Maps Integration
@@ -555,12 +278,19 @@ Hop Hop System
 │   ├── User Model
 │   ├── Trip Model
 │   ├── LocationPoint Model
-│   └── Vehicle Model
-└── UI Components Layer
-    ├── AuthFormField
-    ├── TripCard
-    ├── SkeletonTripList
-    └── ErrorDialog
+│   ├── Vehicle Model
+│   └── TripPassenger Model
+├── UI Components Layer
+│   ├── AuthFormField
+│   ├── TripCard
+│   ├── SkeletonTripList
+│   ├── ErrorDialog
+│   └── ModernLoading
+└── Services Layer
+    ├── ApiService
+    ├── GoogleAuthService
+    ├── SocketService
+    └── NotificationService
 ```
 
 ### **Diagrama de Secuencia (Vista de Diseño)**
@@ -592,6 +322,29 @@ Conductor → CreateTripScreen → TripProvider → Backend API → MongoDB
 10. │◄───Success─────│◄───Success─────│◄───201 Created───│           │
 ```
 
+**Secuencia: Google Sign-In**
+
+```
+Usuario → GoogleSignInScreen → Firebase Auth → Backend API → MongoDB
+    │              │               │              │           │
+    │              │               │              │           │
+1.  │───signIn()───►│───Firebase Auth───►│           │
+    │              │               │              │           │
+2.  │              │◄───ID Token────────│           │
+    │              │               │              │           │
+3.  │              │───POST /auth/google───►│           │
+    │              │               │              │           │
+4.  │              │               │───Validate Token───►│
+    │              │               │              │           │
+5.  │              │               │◄───User Data────────│
+    │              │               │              │           │
+6.  │              │               │───Create/Update User───►│
+    │              │               │              │           │
+7.  │              │               │◄───Success────────│
+    │              │               │              │           │
+8.  │◄───Success─────│◄───JWT Token─────│◄───200 OK─────│           │
+```
+
 ### **Diagrama de Clases**
 
 ```
@@ -604,9 +357,9 @@ Conductor → CreateTripScreen → TripProvider → Backend API → MongoDB
 ├─────────────────┤    ├─────────────────┤    │ + init()        │
 │ + login()       │    │ + createTrip()  │    │ + sendNotification│
 │ + register()    │    │ + fetchTrips()  │    │ + handleMessage │
-│ + logout()      │    │ + bookTrip()    │    └─────────────────┘
-└─────────────────┘    │ + manageBooking │
-         │              └─────────────────┘
+│ + googleSignIn()│    │ + bookTrip()    │    └─────────────────┘
+│ + logout()      │    │ + manageBooking │
+└─────────────────┘    └─────────────────┘
          │                       │
          │              ┌─────────────────┐
          │              │   SocketService │
@@ -628,6 +381,7 @@ Conductor → CreateTripScreen → TripProvider → Backend API → MongoDB
 │ - email         │
 │ - role          │
 │ - university    │
+│ - studentId     │
 │ - vehicle       │
 ├─────────────────┤
 │ + fromJson()    │
@@ -651,12 +405,17 @@ Conductor → CreateTripScreen → TripProvider → Backend API → MongoDB
   phone: String,
   university: String,
   studentId: String,
+  profilePhoto: String,
+  age: Number,
+  gender: String,
+  bio: String,
   vehicle: {
     make: String,
     model: String,
     year: Number,
     color: String,
-    licensePlate: String
+    licensePlate: String,
+    totalSeats: Number
   },
   fcmToken: String,
   createdAt: Date,
@@ -683,7 +442,7 @@ Conductor → CreateTripScreen → TripProvider → Backend API → MongoDB
   seatsBooked: Number,
   pricePerSeat: Number,
   description: String,
-  status: String (active|full|expired|completed),
+  status: String (esperando|completo|en-proceso|expirado|cancelado),
   passengers: [{
     user: ObjectId (ref: users),
     status: String (pending|confirmed|rejected),
@@ -712,7 +471,8 @@ lib/
 │   ├── auth/
 │   │   ├── auth_wrapper.dart
 │   │   ├── login_screen.dart
-│   │   └── register_screen.dart
+│   │   ├── register_screen.dart
+│   │   └── google_signin_screen.dart
 │   ├── home/
 │   │   ├── main_navigation_screen.dart
 │   │   ├── home_screen.dart
@@ -721,20 +481,34 @@ lib/
 │   │   ├── create_trip_screen.dart
 │   │   ├── trip_details_screen.dart
 │   │   ├── my_trips_screen.dart
+│   │   ├── passenger_trip_details_screen.dart
 │   │   └── location_picker_screen.dart
-│   └── profile/
-│       └── profile_screen.dart
+│   ├── profile/
+│   │   ├── profile_screen.dart
+│   │   ├── edit_profile_screen.dart
+│   │   └── driver_profile_screen.dart
+│   └── onboarding/
+│       ├── welcome_screen.dart
+│       ├── terms_conditions_screen.dart
+│       └── privacy_policy_screen.dart
 ├── services/                    # Servicios externos
 │   ├── notification_service.dart
-│   └── socket_service.dart
+│   ├── socket_service.dart
+│   ├── google_auth_service.dart
+│   └── api_service.dart
 ├── widgets/                     # Componentes reutilizables
 │   ├── auth_form_field.dart
 │   ├── trip_card.dart
 │   ├── skeleton_trip_list.dart
-│   └── error_dialog.dart
+│   ├── error_dialog.dart
+│   ├── modern_loading.dart
+│   ├── google_signin_button.dart
+│   └── profile_info_tile.dart
+├── theme/                       # Tema de la aplicación
+│   └── app_theme.dart
 └── utils/                       # Utilidades
-    ├── constants.dart
-    └── helpers.dart
+    ├── app_config.dart
+    └── constants.dart
 ```
 
 ### **Diagrama de Arquitectura del Sistema (Componentes)**
@@ -805,6 +579,26 @@ lib/
     └─────────┘              └───────┘              └─────────┘
 ```
 
+**Proceso de Google Sign-In:**
+
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Usuario       │    │   Firebase      │    │   Backend       │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         │                       │                       │
+    ┌────▼────┐              ┌───▼───┐              ┌────▼────┐
+    │Iniciar  │              │Validar│              │Crear    │
+    │Sesión   │              │Token  │              │Usuario  │
+    └─────────┘              └───────┘              └─────────┘
+         │                       │                       │
+         │                       │                       │
+    ┌────▼────┐              ┌───▼───┐              ┌────▼────┐
+    │Obtener  │              │Extraer│              │Guardar │
+    │Token    │              │Datos  │              │Perfil  │
+    └─────────┘              └───────┘              └─────────┘
+```
+
 ## **3.5. Vista de Despliegue (Vista Física)**
 
 ### **Diagrama de Despliegue**
@@ -840,9 +634,9 @@ lib/
 └─────────────────────────────────────────────────────────────────┘
 ```
 
----
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-# **4. ATRIBUTOS DE CALIDAD DEL SOFTWARE**
+4. <span id="_Toc52661349" class="anchor"></span>**Atributos de Calidad del Software**
 
 ## **Escenario de Funcionalidad**
 
@@ -855,10 +649,11 @@ lib/
 - ✅ **Robustez**: Manejo de errores y casos edge
 
 **Escenario de Prueba**:
-- Usuario puede registrarse y autenticarse
-- Conductor puede crear viajes con geolocalización
+- Usuario puede registrarse y autenticarse con Google Sign-In
+- Conductor puede crear viajes con geolocalización automática
 - Pasajero puede buscar y reservar viajes
 - Sistema procesa notificaciones en tiempo real
+- Viajes expiran automáticamente en 10 minutos
 
 ## **Escenario de Usabilidad**
 
@@ -871,7 +666,7 @@ lib/
 - ✅ **Satisfacción**: Interfaz Material Design 3 moderna
 
 **Escenario de Prueba**:
-- Usuario nuevo puede completar registro en < 2 minutos
+- Usuario nuevo puede completar registro con Google en < 1 minuto
 - Conductor puede crear viaje en < 1 minuto
 - Pasajero puede encontrar viaje en < 30 segundos
 - Interfaz intuitiva sin necesidad de tutorial
@@ -945,3 +740,273 @@ lib/
 - ✅ **Estándares**: Uso de protocolos estándar (HTTP, WebSocket)
 - ✅ **Formato de Datos**: JSON para intercambio de información
 - ✅ **Compatibilidad**: Funciona con diferentes proveedores de servicios
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+5. <span id="_Toc52661350" class="anchor"></span>**Estado Actual de Implementación**
+
+## **5.1. Arquitectura Completamente Implementada**
+
+**✅ FRONTEND (Flutter) - 100% IMPLEMENTADO:**
+- Aplicación móvil multiplataforma (Android/iOS)
+- Sistema de autenticación con Google Sign-In
+- Gestión de perfiles de usuario (conductor/pasajero)
+- Creación de viajes con geolocalización automática
+- Búsqueda y visualización de viajes
+- Sistema de reservas con aprobación
+- Notificaciones push integradas
+- Interfaz Material Design 3
+- Gestión de estado con Provider pattern
+- Manejo de errores y validaciones
+
+**✅ BACKEND (Node.js) - 100% IMPLEMENTADO:**
+- API REST completa con Express.js
+- Autenticación JWT + Firebase Admin SDK
+- Base de datos MongoDB con Mongoose
+- Comunicación en tiempo real con Socket.IO
+- Notificaciones push con Firebase FCM
+- Validación de datos con express-validator
+- Manejo de errores y logging
+- Middleware de autenticación y autorización
+
+**✅ SERVICIOS EXTERNOS - 100% INTEGRADOS:**
+- Google Maps API para geolocalización
+- Firebase Cloud Messaging para notificaciones
+- Firebase Auth para autenticación
+- Socket.IO para comunicación en tiempo real
+- MongoDB Atlas para base de datos
+
+## **5.2. Patrones Arquitectónicos Implementados**
+
+### **Patrón MVC (Model-View-Controller)**
+- **Model**: Clases de datos (User, Trip, Vehicle)
+- **View**: Pantallas Flutter (Screens)
+- **Controller**: Providers (AuthProvider, TripProvider)
+
+### **Patrón Provider (State Management)**
+- **AuthProvider**: Gestión de autenticación y perfil de usuario
+- **TripProvider**: Gestión de viajes y reservas
+- **Notificación automática** de cambios de estado
+
+### **Patrón Repository**
+- **ApiService**: Abstracción de comunicación con backend
+- **NotificationService**: Gestión de notificaciones push
+- **SocketService**: Comunicación en tiempo real
+
+### **Patrón Singleton**
+- **NotificationService**: Instancia única para notificaciones
+- **SocketService**: Conexión única de WebSocket
+- **ApiService**: Cliente HTTP compartido
+
+## **5.3. Arquitectura de Datos Implementada**
+
+### **Modelos de Datos**
+```dart
+// User Model
+class User {
+  final String id;
+  final String firstName;
+  final String lastName;
+  final String email;
+  final String role;
+  final String university;
+  final String studentId;
+  final Vehicle? vehicle;
+}
+
+// Trip Model
+class Trip {
+  final String id;
+  final User driver;
+  final LocationPoint origin;
+  final LocationPoint destination;
+  final DateTime departureTime;
+  final DateTime? expiresAt;
+  final int availableSeats;
+  final double pricePerSeat;
+  final String status;
+  final List<TripPassenger> passengers;
+}
+
+// Vehicle Model
+class Vehicle {
+  final String make;
+  final String model;
+  final int year;
+  final String color;
+  final String licensePlate;
+  final int totalSeats;
+}
+```
+
+### **Esquemas de Base de Datos**
+```javascript
+// Esquema de Usuario
+const userSchema = new mongoose.Schema({
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  role: { type: String, enum: ['driver', 'passenger'], default: 'passenger' },
+  phone: { type: String, default: 'Pendiente' },
+  university: { type: String, default: 'UPT' },
+  studentId: { type: String },
+  vehicle: {
+    make: String,
+    model: String,
+    year: Number,
+    color: String,
+    licensePlate: String,
+    totalSeats: { type: Number, default: 4 }
+  },
+  fcmToken: String
+});
+
+// Esquema de Viaje
+const tripSchema = new mongoose.Schema({
+  driver: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  origin: {
+    name: { type: String, required: true },
+    type: { type: String, default: 'Point' },
+    coordinates: { type: [Number], required: true }
+  },
+  destination: {
+    name: { type: String, required: true },
+    type: { type: String, default: 'Point' },
+    coordinates: { type: [Number], required: true }
+  },
+  departureTime: { type: Date, required: true },
+  expiresAt: { type: Date, required: true },
+  availableSeats: { type: Number, required: true, min: 1, max: 6 },
+  seatsBooked: { type: Number, default: 0 },
+  pricePerSeat: { type: Number, required: true, min: 1, max: 3 },
+  description: String,
+  status: { 
+    type: String, 
+    enum: ['esperando', 'completo', 'en-proceso', 'expirado', 'cancelado'],
+    default: 'esperando'
+  },
+  passengers: [{
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    status: { type: String, enum: ['pending', 'confirmed', 'rejected'], default: 'pending' },
+    bookedAt: { type: Date, default: Date.now }
+  }]
+});
+```
+
+## **5.4. Flujos de Comunicación Implementados**
+
+### **Flujo de Autenticación**
+```
+Usuario → Google Sign-In → Firebase Auth → Backend API → MongoDB
+    ↓           ↓              ↓              ↓           ↓
+  Inicia    Valida        Genera        Verifica    Guarda
+  Sesión    Credenciales  ID Token      Token       Usuario
+```
+
+### **Flujo de Creación de Viajes**
+```
+Conductor → App → Geolocator → Google Maps → Backend → MongoDB
+    ↓         ↓        ↓           ↓          ↓        ↓
+  Crea     Obtiene  Calcula    Valida    Guarda   Notifica
+  Viaje    Ubicación Distancia Precio    Datos    Pasajeros
+```
+
+### **Flujo de Notificaciones**
+```
+Sistema → Firebase FCM → Dispositivo → App → Usuario
+    ↓           ↓            ↓         ↓       ↓
+  Evento    Envía        Recibe    Procesa  Muestra
+  Ocurre    Push         Notif    Mensaje  Alerta
+```
+
+## **5.5. Seguridad Implementada**
+
+### **Autenticación y Autorización**
+- **JWT Tokens**: Autenticación segura con expiración
+- **Firebase Auth**: Integración con Google Sign-In
+- **Validación de Roles**: Conductor vs Pasajero
+- **Middleware de Seguridad**: Verificación en cada request
+
+### **Protección de Datos**
+- **Encriptación**: Contraseñas hasheadas con bcrypt
+- **HTTPS**: Comunicación segura obligatoria
+- **Validación**: Datos validados en frontend y backend
+- **Privacidad**: Cumplimiento con Ley de Protección de Datos
+
+### **Comunicación Segura**
+- **WebSockets**: Conexión en tiempo real segura
+- **CORS**: Configuración de acceso cruzado
+- **Rate Limiting**: Protección contra ataques
+- **Logging**: Registro de actividades de seguridad
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+<span id="_Toc52661351" class="anchor"></span>**CONCLUSIONES**
+
+El documento de arquitectura de software para **Hop Hop – Conecta tu camino universitario** establece una base sólida para el desarrollo de una aplicación móvil de carpooling específicamente diseñada para estudiantes universitarios peruanos.
+
+**Conclusiones Principales:**
+
+1. **Arquitectura Sólida**: La arquitectura implementada utiliza patrones probados y tecnologías modernas que garantizan escalabilidad, mantenibilidad y rendimiento.
+
+2. **Patrón 4+1 Implementado**: Todas las vistas arquitectónicas están documentadas y implementadas, proporcionando una visión completa del sistema.
+
+3. **Tecnologías Apropiadas**: La selección de Flutter, Node.js, MongoDB y Firebase es adecuada para los requerimientos del sistema.
+
+4. **Seguridad Robusta**: El sistema implementa múltiples capas de seguridad para proteger datos sensibles y garantizar comunicación segura.
+
+5. **Escalabilidad Preparada**: La arquitectura está diseñada para crecer con el número de usuarios y funcionalidades.
+
+6. **✅ SISTEMA COMPLETAMENTE IMPLEMENTADO**: Todas las funcionalidades core están desarrolladas y operativas.
+
+7. **Calidad del Software**: Los atributos de calidad están implementados y verificados mediante pruebas.
+
+<span id="_Toc52661352" class="anchor"></span>**RECOMENDACIONES**
+
+**Recomendaciones Técnicas:**
+- ✅ **COMPLETADO**: Arquitectura escalable implementada
+- ✅ **COMPLETADO**: Patrones de diseño aplicados correctamente
+- ✅ **COMPLETADO**: Seguridad implementada en múltiples capas
+- ✅ **COMPLETADO**: Documentación técnica completa
+
+**Recomendaciones de Desarrollo:**
+- ✅ **COMPLETADO**: Código modular y bien estructurado
+- ✅ **COMPLETADO**: Gestión de estado eficiente con Provider
+- ✅ **COMPLETADO**: Integración completa con servicios externos
+- ✅ **COMPLETADO**: Manejo de errores robusto
+
+**Recomendaciones de Despliegue:**
+- 🚀 **INMEDIATO**: Sistema listo para despliegue en producción
+- 🚀 **INMEDIATO**: Infraestructura cloud configurada
+- 🚀 **INMEDIATO**: Monitoreo y logging implementados
+- 🚀 **INMEDIATO**: Backup automático configurado
+
+**Recomendaciones de Mantenimiento:**
+- 🔄 **CONTINUO**: Monitoreo de rendimiento y disponibilidad
+- 🔄 **CONTINUO**: Actualizaciones de seguridad
+- 🔄 **CONTINUO**: Optimización basada en métricas de uso
+- 🔄 **CONTINUO**: Escalabilidad según crecimiento de usuarios
+
+<span id="_Toc52661353" class="anchor"></span>**BIBLIOGRAFIA**
+
+- Pressman, R. (2010). Ingeniería del Software: Un Enfoque Práctico. McGraw-Hill.
+- Sommerville, I. (2011). Ingeniería de Software. Pearson.
+- IEEE Std 1471-2000. IEEE Recommended Practice for Architectural Description of Software-Intensive Systems.
+- Kruchten, P. (1995). The 4+1 View Model of Architecture. IEEE Software.
+- PMI. (2017). Guía de los Fundamentos para la Dirección de Proyectos (PMBOK Guide).
+- Flutter Team. (2023). Flutter Documentation. Google LLC.
+- Node.js Foundation. (2023). Node.js Documentation. OpenJS Foundation.
+
+<span id="_Toc52661354" class="anchor"></span>**WEBGRAFIA**
+
+- https://flutter.dev/docs - Documentación oficial de Flutter
+- https://nodejs.org/docs - Documentación de Node.js
+- https://firebase.google.com/docs - Documentación de Firebase
+- https://developers.google.com/maps/documentation - Google Maps API
+- https://www.mongodb.com/docs - Documentación de MongoDB
+- https://socket.io/docs - Documentación de Socket.IO
+- https://expressjs.com/ - Documentación de Express.js
+- https://mongoosejs.com/docs - Documentación de Mongoose
+- https://pub.dev/packages/provider - Documentación de Provider
+- https://pub.dev/packages/google_maps_flutter - Google Maps Flutter
