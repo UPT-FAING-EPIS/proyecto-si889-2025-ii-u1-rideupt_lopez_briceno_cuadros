@@ -19,6 +19,7 @@ Docente: *Mag. Patrick Cuadros Quiroga*
 Integrantes:
 
 ***Jorge Luis BRICEÑO DIAZ (2017059611)***
+
 ***Mirian CUADROS GARCIA (2021071083)***
 
 **Tacna – Perú**
@@ -30,21 +31,24 @@ Integrantes:
 </center>
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-Sistema Hop Hop – Conecta tu camino universitario
+# Sistema Hop Hop – Conecta tu camino universitario
 
-Informe de Visión
+### Informe de Visión
 
-Versión *{2.0}*
+**Versión:** *{2.0}*
 
-||CONTROL DE VERSIONES||||||
-|| :-: | :- | :- | :- | :- | :- |
-||Versión|Hecha por|Revisada por|Aprobada por|Fecha|Motivo|
-||1\.0|JBD|MCG|JBD|22/10/2025|Versión Original|
-||2\.0|JBD|MCG|JBD|25/01/2025|Actualización con estado de implementación|
+---
 
-<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+## Control de Versiones
 
-# **INDICE GENERAL**
+| Versión | Hecha por | Revisada por | Aprobada por | Fecha       | Motivo                                 |
+|:-------:|:---------:|:------------:|:------------:|:-----------:|:--------------------------------------:|
+| 1.0     | JBD       | MCG          | JBD          | 22/10/2025  | Versión Original                       |
+| 2.0     | JBD       | MCG          | JBD          | 25/01/2025  | Actualización con estado de implementación |
+
+---
+
+## Índice General
 
 [1. Introducción](#_Toc52661346)
 
