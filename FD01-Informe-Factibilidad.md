@@ -68,7 +68,7 @@
 | Atributo | Descripción |
 | :--- | :--- |
 | **1.1. Nombre del proyecto** | **Hop Hop – Conecta tu camino universitario** |
-| **1.2. Duración del proyecto** | **6 meses** (desde la fase de análisis hasta la implementación completa) |
+| **1.2. Duración del proyecto** | **3 meses** (desde la fase de análisis hasta la implementación completa) |
 | **1.3. Descripción** | Hop Hop es una aplicación móvil de carpooling diseñada para estudiantes universitarios. Facilita el transporte compartido, conectando a conductores con asientos disponibles y pasajeros que necesitan un transporte económico y seguro. El proyecto busca resolver los altos costos y las limitaciones de movilidad en el entorno universitario peruano. |
 | **1.4. Objetivos** | **1.4.1 Objetivo general**<br>Desarrollar una aplicación móvil de carpooling que conecte a estudiantes universitarios para facilitar el transporte compartido, reduciendo costos y mejorando la accesibilidad a la educación superior.<br><br>**1.4.2 Objetivos Específicos**<br>- **OS1**: Implementar un registro y autenticación seguros con validación académica.<br>- **OS2**: Desarrollar geolocalización para la creación y búsqueda de viajes en tiempo real.<br>- **OS3**: Crear un sistema de reservas y aprobación con notificaciones push instantáneas.<br>- **OS4**: Implementar un sistema de calificaciones y reseñas para garantizar la confianza.<br>- **OS5**: Desarrollar un backend robusto con API REST y comunicación en tiempo real.<br>- **OS6**: Crear una interfaz de usuario intuitiva y accesible (Material Design). |
 
