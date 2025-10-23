@@ -21,7 +21,9 @@
 **Integrantes:**
 
 ***Jorge Luis BRICEÑO DIAZ (2017059611)***
+
 ***Mirian CUADROS GARCIA (2021071083)***
+
 ***Brayar Christian LOPEZ CATUNTA (2021071083)***
 
 **Tacna – Perú**
